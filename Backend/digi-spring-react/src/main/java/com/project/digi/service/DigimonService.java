@@ -58,7 +58,7 @@ public class DigimonService {
                 .block();
         digimonsDto.add(digimon);
     	}
-        // Mapeamos los DTOs a entidades Digimon
+
         List<Digimon> digimons = digimonsDto.stream()
                 .map(digimonDto -> new Digimon(
                         digimonDto.id(),
@@ -67,7 +67,7 @@ public class DigimonService {
                 ))
                 .collect(Collectors.toList());
 
-        // Guardamos todos los Digimons en la base de datos
+
         digimonRepository.saveAll(digimons);
     }
     
