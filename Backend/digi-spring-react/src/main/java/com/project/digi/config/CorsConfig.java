@@ -15,7 +15,8 @@ public class CorsConfig {
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/digimon/**") // Permite todas las rutas que empiecen por /api/
                         .allowedOrigins("http://localhost:3000") // Permite peticiones desde React
-                        .allowedMethods("GET", "POST", "PUT", "DELETE");
+                        .allowedMethods("GET", "POST", "PUT", "DELETE")
+                        .allowCredentials(true);
             }
         };
     }
