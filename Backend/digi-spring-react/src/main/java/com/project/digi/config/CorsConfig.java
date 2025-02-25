@@ -13,7 +13,7 @@ public class CorsConfig {
         	
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/digimon/**") // Permite todas las rutas que empiecen por /api/
+                registry.addMapping("/**") // Permite todas las rutas que empiecen por /api/
                         .allowedOrigins("http://localhost:3000") // Permite peticiones desde React
                         .allowedMethods("GET", "POST", "PUT", "DELETE")
                         .allowCredentials(true);

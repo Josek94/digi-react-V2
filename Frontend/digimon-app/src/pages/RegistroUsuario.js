@@ -75,7 +75,7 @@ function RegistroUsuario() {
       </form>
       <p className="mt-3">{mensaje}</p>
 
-      <button className="btn btn-link" onClick={() => navigate('/login')}>
+      <button className="btn btn-link" onClick={() => navigate('/')}>
         Volver al Inicio de Sesión
       </button>
     </div>

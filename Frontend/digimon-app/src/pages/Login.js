@@ -18,12 +18,14 @@ function Login() {
       });
 
       if (respuesta.ok) {
+        const data = await respuesta.json(); 
         setMensaje('Inicio de sesión exitoso');
+        localStorage.setItem("usuario", JSON.stringify(data));
         // Aquí podrías guardar el token si lo necesitas:
         // const data = await respuesta.json();
         // localStorage.setItem('token', data.token);
 
-        navigate('/'); // Redirigir a la página principal
+        navigate("/digimon/list"); // Redirigir a la página principal
       } else {
         const errorData = await respuesta.json();
         setMensaje('Error: ' + errorData.message);

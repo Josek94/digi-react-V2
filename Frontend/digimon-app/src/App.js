@@ -12,7 +12,7 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        <Route path="/list" element={<DigimonList />} />
+        <Route path="/digimon/list" element={<DigimonList />} />
         <Route path="/digimon/:id" element={<DigimonDetail />} />
         <Route path="/registro" element={<RegistroUsuario />} />
         <Route path="/" element={<Login />} />
