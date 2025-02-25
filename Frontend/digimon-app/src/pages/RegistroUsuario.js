@@ -27,7 +27,7 @@ function RegistroUsuario() {
         setAdmin(false);
 
         setTimeout(() => {
-          navigate('/login');
+          navigate('/');
         }, 1500);
       } else {
         const errorData = await respuesta.json();

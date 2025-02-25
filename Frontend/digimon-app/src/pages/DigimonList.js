@@ -14,7 +14,7 @@ function DigimonList() {
 
   const handleImport = async () => {
     try {
-      const response = await fetch("http://localhost:8080/digimons/import", {
+      const response = await fetch("http://localhost:8080/digimon/import", {
         method: "POST",
       });
 
